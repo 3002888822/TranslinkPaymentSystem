@@ -65,12 +65,12 @@ public Map referenceData(HttpServletRequest request)throws Exception {
     return mav;
     
   }
-@RequestMapping(value="delete/{username}", method = RequestMethod.GET)
-public ModelAndView delete( HttpServletRequest request, HttpServletResponse response,
-    @ModelAttribute("login") Login login) {
-  ModelAndView mav = null;
-  User user = userService.validateUser(login);
-  return mav;
- 
-}
+  @RequestMapping(value="delete/{username}", method = RequestMethod.GET)
+  public ModelAndView delete( HttpServletRequest request, HttpServletResponse response,
+      @ModelAttribute("login") Login login) {
+    ModelAndView mav = null;
+    User user = userService.validateUser(login);
+    return mav;
+   
+  }
 }
