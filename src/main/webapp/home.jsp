@@ -4,12 +4,21 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<style>
+body {background-color: rgb(186, 196, 250);}
+h1   {color: rgb(21, 21, 121);
+margin-left: 250px;
+margin-top: 40px;}
+
+
+</style>
+
 <title>Welcome</title>
 </head>
 <body>
 	<table align="center">
 		<tr>
-			<td><a href="login">Login</a></td>
+			<td><a href="login">Login</td>
 			<td><a href="register">Register</a></td>
 		</tr>
 	</table>

@@ -41,7 +41,7 @@ public class UserDaoImpl implements UserDao {
 
 }
 
-class UserMapper implements RowMapper<User> {
+public class UserMapper implements RowMapper<User> {
 
   public User mapRow(ResultSet rs, int arg1) throws SQLException {
     User user = new User();
