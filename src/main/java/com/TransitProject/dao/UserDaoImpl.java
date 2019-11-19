@@ -28,7 +28,11 @@ public class UserDaoImpl implements UserDao {
     jdbcTemplate.update(sql, new Object[] { user.getUsername(), user.getPassword(), user.getFirstname(),
         user.getLastname(), user.getEmail(), user.getAddress(), user.getPhone() });
   }
-
+public User delete(User cust) {
+  String sql = "delete from users where username='" + cust.getUsername() + "' and password='" + cust.getPassword()+ '"';
+  return cust;
+  
+}
   public User validateUser(Login login) {
 
     String sql = "select * from users where username='" + login.getUsername() + "' and password='" + login.getPassword()
@@ -38,8 +42,6 @@ public class UserDaoImpl implements UserDao {
 
     return users.size() > 0 ? users.get(0) : null;
   }
-
-}
 
 public class UserMapper implements RowMapper<User> {
 
@@ -56,4 +58,6 @@ public class UserMapper implements RowMapper<User> {
 
     return user;
   }
+}
+
 }

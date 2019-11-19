@@ -32,8 +32,9 @@ margin-top: 40px;}
 			</tr>
 			<tr>
 				<td><p>logging in as:</p>
-  <input type="radio" name="login" value="Customer"> Customer</input>
+				<input type="radio" name="login" value="Customer"> Customer</input>
   <input type="radio" name="login" value="Admin"> Admin<br></td>
+ 
   <br>
   <br>
   

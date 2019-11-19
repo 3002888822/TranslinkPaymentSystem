@@ -20,5 +20,13 @@ public class Login {
   public void setPassword(String password) {
     this.password = password;
   }
+/*String rBtn= "Customer";
 
+public String getrBtn() {
+  return rBtn;
+}
+
+public void setrBtn(String rBtn) {
+  this.rBtn = rBtn;
+}*/
 }
