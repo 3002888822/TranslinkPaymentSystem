@@ -5,6 +5,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<style>
+body {background-color: rgb(186, 196, 250);}
+h1   {color: rgb(21, 21, 121);
+margin-left: 250px;
+margin-top: 40px;}
+
+
+</style>
+
 <title>Login</title>
 </head>
 <body>
@@ -22,11 +31,17 @@
 						id="password" /></td>
 			</tr>
 			<tr>
-				<td></td>
-				<td align="left"><form:button id="login" name="login">Login</form:button></td>
+				<td><p>logging in as:</p>
+  <input type="radio" name="login" value="Customer"> Customer</input>
+  <input type="radio" name="login" value="Admin"> Admin<br></td>
+  <br>
+  <br>
+  
+				
+				
 			</tr>
 
-			<tr></tr>
+			<tr><td align="left"><form:button id="login" name="login">Login</form:button></td></tr>
 			<tr>
 				<td></td>
 				<td><a href="home.jsp">Home</a></td>
