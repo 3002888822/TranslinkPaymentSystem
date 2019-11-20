@@ -21,10 +21,10 @@ margin-top: 40px;}
 			<td>Welcome ${firstname}</td>
 		</tr>
 		<tr>
-		<td><button id="delete" name="delete account">delete account</button></td>
+		<td><button id="delete" value="delete">delete account</button></td>
 		</tr>
 		<tr>
-		<td><button id="update" name="update account">update account</button></td>
+		<td><button id="update" value="update">update account</button></td>
 		</tr>
 		<tr>
 			<td><a href="home.jsp">Home</a></td>

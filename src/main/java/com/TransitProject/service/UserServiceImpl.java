@@ -18,5 +18,8 @@ public class UserServiceImpl implements UserService {
   public User validateUser(Login login) {
     return userDao.validateUser(login);
   }
+  public User delete(Login login) {
+    return userDao.delete(login);
+  }
 
 }

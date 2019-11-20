@@ -27,6 +27,7 @@ public class LoginController {
   @Autowired
   UserService userService;
 
+
   @RequestMapping(value = "/login", method = RequestMethod.GET)
   public ModelAndView showLogin(HttpServletRequest request, HttpServletResponse response) {
     ModelAndView mav = new ModelAndView("login");
@@ -34,18 +35,7 @@ public class LoginController {
 
     return mav;
   }
-/*@RequestMapping(value = "/Customer",method = RequestMethod.GET)
-public Map referenceData(HttpServletRequest request)throws Exception {
-  Map referenceData = new HashMap();
-  
-  List<String> BtnList = new ArrayList<String>();
-  BtnList.add("Customer");
-  BtnList.add("Admin");
-  referenceData.put("BtnList", BtnList);
-  
-  
-  return referenceData;
-}*/
+
   @RequestMapping(value = "/loginProcess", method = RequestMethod.POST)
   public ModelAndView loginProcess(HttpServletRequest request, HttpServletResponse response,
       @ModelAttribute("login") Login login) {
@@ -65,12 +55,14 @@ public Map referenceData(HttpServletRequest request)throws Exception {
     return mav;
     
   }
-  @RequestMapping(value="delete/{username}", method = RequestMethod.GET)
+  /* @RequestMapping(value="delete/{username}", method = RequestMethod.GET)
   public ModelAndView delete( HttpServletRequest request, HttpServletResponse response,
-      @ModelAttribute("login") Login login) {
+      @ModelAttribute("Delete") Login login ) {
     ModelAndView mav = null;
-    User user = userService.validateUser(login);
+    User user = um.delete(Cust);
     return mav;
    
-  }
+  }*/
+
+
 }
