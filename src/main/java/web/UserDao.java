@@ -14,7 +14,7 @@ public class UserDao {
         Class.forName("com.mysql.jdbc.Driver");
 
         try (Connection connection = DriverManager
-            .getConnection("jdbc:mysql://localhost:3306/mysql_database?useSSL=false", "root", "root");
+            .getConnection("jdbc:mysql://localhost:3306/translink?useSSL=false", "root", "root");
 
             // Step 2:Create a statement using connection object
             PreparedStatement preparedStatement = connection
@@ -30,7 +30,7 @@ public class UserDao {
             System.err.print(e.getStackTrace());
         }
         return status;
-    }
+    } 
 	
 	public boolean newUser(User user) throws ClassNotFoundException {
         boolean status = false;
@@ -38,11 +38,11 @@ public class UserDao {
         Class.forName("com.mysql.jdbc.Driver");
 
         try (Connection connection = DriverManager
-            .getConnection("jdbc:mysql://localhost:3306/mysql_database?useSSL=false", "root", "root");
+            .getConnection("jdbc:mysql://localhost:3306/translink?useSSL=false", "root", "root");
 
             // Step 2:Create a statement using connection object
             PreparedStatement preparedStatement = connection
-            .prepareStatement("insert into user values(?, ?, ?, ?, ?)")) {
+            .prepareStatement("insert into user(firstname, lastname, mobile, email, password) values(?, ?, ?, ?, ?)")) {
             preparedStatement.setString(1, user.getName());
             preparedStatement.setString(2, user.getLastname());
             preparedStatement.setString(2, user.getMobile());
